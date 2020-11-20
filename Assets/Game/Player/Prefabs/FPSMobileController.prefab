@@ -151,10 +151,10 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.8
-  m_Radius: 0.5
+  m_Radius: 0.35
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &959369201726868805
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsWalking: 0
   m_WalkSpeed: 5
-  m_RunSpeed: 10
-  m_RunstepLenghten: 0.7
+  m_RunSpeed: 5
+  m_RunstepLenghten: 1
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
@@ -241,7 +241,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    VerticaltoHorizontalRatio: 98
+    VerticaltoHorizontalRatio: 2
   m_JumpBob:
     BobDuration: 0.2
     BobAmount: 0.1
@@ -376,9 +376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291ee849727e42b43a4a90be2285116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FixedJoystick: {fileID: 2735539138214740964}
-  TouchField: {fileID: 959369202288225269}
-  FPSController: {fileID: 959369201726868805}
+  m_FixedJoystick: {fileID: 2735539138214740964}
+  m_TouchField: {fileID: 959369202288225269}
+  m_FPSController: {fileID: 959369201726868805}
+  m_IsCrouching: 0
+  m_CrouchSpeed: 8
 --- !u!1 &959369201733941415
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +437,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -823,7 +825,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 959369202446995719}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959369201272168594}
+        m_MethodName: Crouch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &959369201962709531
 PrefabInstance:
   m_ObjectHideFlags: 0
