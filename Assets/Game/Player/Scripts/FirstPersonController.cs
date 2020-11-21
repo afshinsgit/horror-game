@@ -39,7 +39,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_StepCycle;
         private float m_NextStep;
         private bool m_Jumping;
-        private AudioSource m_AudioSource;
+        public AudioSource m_AudioSource;
 
         [HideInInspector] public Vector2 RunAxis;
 
@@ -48,7 +48,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             Cursor.visible = true;
             m_CharacterController = GetComponent<CharacterController>();
-            m_Camera = Camera.main;
+            m_Camera = GameObject.FindWithTag("FPSCamera").GetComponent<Camera>();
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
             
             m_HeadBob.Setup(m_Camera, m_StepInterval);

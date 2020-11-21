@@ -358,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 959369201726868805, guid: 42e7ddefc4f11224da20a17b836c34b8,
         type: 3}
       propertyPath: m_RunSpeed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 959369201726868805, guid: 42e7ddefc4f11224da20a17b836c34b8,
         type: 3}
@@ -380,6 +380,11 @@ PrefabInstance:
       propertyPath: m_HeadBob.VerticalBobRange
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 959369201726868805, guid: 42e7ddefc4f11224da20a17b836c34b8,
+        type: 3}
+      propertyPath: m_UseHeadBob
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 959369201732133189, guid: 42e7ddefc4f11224da20a17b836c34b8,
         type: 3}
       propertyPath: m_Volume
@@ -388,7 +393,7 @@ PrefabInstance:
     - target: {fileID: 959369201732133189, guid: 42e7ddefc4f11224da20a17b836c34b8,
         type: 3}
       propertyPath: m_Pitch
-      value: 1.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 959369201733772421, guid: 42e7ddefc4f11224da20a17b836c34b8,
         type: 3}
@@ -449,6 +454,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FPSMobileController
+      objectReference: {fileID: 0}
+    - target: {fileID: 959369201733941413, guid: 42e7ddefc4f11224da20a17b836c34b8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 959369201733941415, guid: 42e7ddefc4f11224da20a17b836c34b8,
+        type: 3}
+      propertyPath: m_TagString
+      value: FPSCamera
       objectReference: {fileID: 0}
     - target: {fileID: 959369202446995704, guid: 42e7ddefc4f11224da20a17b836c34b8,
         type: 3}
