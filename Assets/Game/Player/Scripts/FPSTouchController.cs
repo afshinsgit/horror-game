@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class FPSTouchController : MonoBehaviour
 {
-    public FixedJoystick m_FixedJoystick;
-    public FixedTouchField m_TouchField;
-    public FirstPersonController m_FPSController;
-
-    private CharacterController m_CharacterController;
-
-    private float m_TargetHeight = 1.8f;
-    public float m_CrouchDownSpeed = 8f;
-    public bool m_IsCrouching = false;
+    [SerializeField] private FixedJoystick m_FixedJoystick;
+    [SerializeField] private FixedTouchField m_TouchField;
+    [SerializeField] private FirstPersonController m_FPSController;
+    [SerializeField] private float m_TargetHeight = 1.8f;
+    [SerializeField] private float m_CrouchDownSpeed = 8f;
+    [SerializeField] private bool m_IsCrouching = false;
     private Camera m_Camera;
+    private CharacterController m_CharacterController;
 
 
     // Start is called before the first frame update
