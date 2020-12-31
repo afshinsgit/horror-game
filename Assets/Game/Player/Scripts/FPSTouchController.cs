@@ -40,7 +40,7 @@ public class FPSTouchController : MonoBehaviour
             m_IsCrouching = true;
             m_FPSController.m_StepInterval = 2.5f;
             m_FPSController.m_RunSpeed = 1.5f;
-            m_TargetHeight = 0.90f;
+            m_TargetHeight = 0.72f;
             m_FPSController.m_AudioSource.volume = 0.004f;
         }
         else if (m_IsCrouching == true && !Physics.Raycast(transform.position, Vector3.up, 1))
