@@ -372,12 +372,12 @@ MonoBehaviour:
   m_SurfaceTypes:
   - m_name: Default
     m_footstepSounds:
-    - {fileID: 8300000, guid: 40d9b4279da708745908d0fa00e15782, type: 3}
-    - {fileID: 8300000, guid: 93a5434090146e24d9df2390dcf18dbd, type: 3}
+    - {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
+    - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
   - m_name: Concrete
     m_footstepSounds:
-    - {fileID: 8300000, guid: b8b16327982c5e14f931746890cff0c1, type: 3}
-    - {fileID: 8300000, guid: 8b0fa3739f7cb944fb8b0385ccb45ab6, type: 3}
+    - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+    - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_FPSController: {fileID: 1853797237797521789}
   m_currentSurface: 
 --- !u!1 &1853797237791521951
