@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.UI;
 using UnityEngine;
-
+using DG.Tweening;
 public class FPSTouchController : MonoBehaviour
 {
     [SerializeField] private FixedJoystick m_FixedJoystick;
@@ -11,14 +12,15 @@ public class FPSTouchController : MonoBehaviour
     [SerializeField] private float m_TargetHeight = 1.8f;
     [SerializeField] private float m_CrouchDownSpeed = 8f;
     [SerializeField] private bool m_IsCrouching = false;
-    private Camera m_Camera;
+    [SerializeField] private Image m_CrouchEffect;
+    private Camera m_FPSCamera;
     private CharacterController m_CharacterController;
 
 
     // Start is called before the first frame update
     private void Start()
     {
-        m_Camera = GameObject.FindWithTag("FPSCamera").GetComponent<Camera>();
+        m_FPSCamera = GameObject.FindWithTag("FPSCamera").GetComponent<Camera>();
         m_CharacterController = GetComponent<CharacterController>();
     }
 
@@ -42,6 +44,7 @@ public class FPSTouchController : MonoBehaviour
             m_FPSController.m_RunSpeed = 1.5f;
             m_TargetHeight = 0.72f;
             m_FPSController.m_AudioSource.volume = 0.004f;
+            m_CrouchEffect.DOColor(new Color32(255, 255, 255, 125), 0.3f);
         }
         else if (m_IsCrouching == true && !Physics.Raycast(transform.position, Vector3.up, 1))
         {
@@ -50,6 +53,7 @@ public class FPSTouchController : MonoBehaviour
             m_FPSController.m_RunSpeed = 4f;
             m_TargetHeight = 1.8f;
             m_FPSController.m_AudioSource.volume = 0.17f;
+            m_CrouchEffect.DOColor(new Color32(255, 255, 255, 0), 0.3f);
         }
     }
 
@@ -57,9 +61,9 @@ public class FPSTouchController : MonoBehaviour
     {
         m_CharacterController.height = Mathf.Lerp(m_CharacterController.height, m_TargetHeight, m_CrouchDownSpeed * Time.deltaTime);
 
-        m_Camera.transform.position = Vector3.Lerp(m_Camera.transform.position,
-        new Vector3(m_Camera.transform.position.x, m_CharacterController.transform.position.y +
-        m_TargetHeight / 2.24f, m_Camera.transform.position.z), m_CrouchDownSpeed * Time.deltaTime);
+        m_FPSCamera.transform.position = Vector3.Lerp(m_FPSCamera.transform.position,
+        new Vector3(m_FPSCamera.transform.position.x, m_CharacterController.transform.position.y +
+        m_TargetHeight / 2.24f, m_FPSCamera.transform.position.z), m_CrouchDownSpeed * Time.deltaTime);
     }
 
     private void HandleHeadBob()
