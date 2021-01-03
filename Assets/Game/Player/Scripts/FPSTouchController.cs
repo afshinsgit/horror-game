@@ -13,7 +13,7 @@ public class FPSTouchController : MonoBehaviour
     [SerializeField] private float m_CrouchDownSpeed = 8f;
     [SerializeField] private bool m_IsCrouching = false;
     [SerializeField] private Image m_CrouchEffect;
-    private Camera m_FPSCamera;
+    [HideInInspector] public Camera m_FPSCamera;
     private CharacterController m_CharacterController;
 
 

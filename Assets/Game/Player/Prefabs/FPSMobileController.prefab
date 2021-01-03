@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 1853797237794366845}
   - component: {fileID: 1853797237648516266}
   - component: {fileID: 2985358692066671496}
+  - component: {fileID: 1229441475627700937}
   m_Layer: 0
   m_Name: FPSMobileController
   m_TagString: Player
@@ -357,6 +358,7 @@ MonoBehaviour:
   m_CrouchDownSpeed: 8
   m_IsCrouching: 0
   m_CrouchEffect: {fileID: 7442091262288956217}
+  m_FPSCamera: {fileID: 0}
 --- !u!114 &2985358692066671496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +382,21 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_FPSController: {fileID: 1853797237797521789}
   m_currentSurface: 
+--- !u!114 &1229441475627700937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853797237791521949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcfec6c5aa524074789ae3a1d2b04199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FPSTouchController: {fileID: 1853797237648516266}
+  m_HighlightMaterial: {fileID: 2100000, guid: 39eca0647ab61b1419114ac0f467a515, type: 2}
+  m_DefaultMaterial: {fileID: 2100000, guid: db2762d04f9b8654aac32e2aaebd332c, type: 2}
 --- !u!1 &1853797237791521951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1272,12 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+--- !u!224 &3538925143006054353 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853797239106516515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3538925143006054364 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
@@ -1267,9 +1290,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &3538925143006054353 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-    type: 3}
-  m_PrefabInstance: {fileID: 1853797239106516515}
-  m_PrefabAsset: {fileID: 0}

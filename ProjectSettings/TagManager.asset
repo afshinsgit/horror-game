@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FPSCamera
   - Concrete
+  - Selectable
   layers:
   - Default
   - TransparentFX
