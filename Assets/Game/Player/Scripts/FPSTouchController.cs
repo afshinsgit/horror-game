@@ -6,13 +6,13 @@ using UnityEngine;
 using DG.Tweening;
 public class FPSTouchController : MonoBehaviour
 {
-    [SerializeField] private FixedJoystick m_FixedJoystick;
-    [SerializeField] private FixedTouchField m_TouchField;
-    [SerializeField] private FirstPersonController m_FPSController;
+    [SerializeField] private FixedJoystick m_FixedJoystick = null;
+    [SerializeField] private FixedTouchField m_TouchField = null;
+    [SerializeField] private FirstPersonController m_FPSController = null;
     [SerializeField] private float m_TargetHeight = 1.8f;
     [SerializeField] private float m_CrouchDownSpeed = 8f;
     [SerializeField] private bool m_IsCrouching = false;
-    [SerializeField] private Image m_CrouchEffect;
+    [SerializeField] private Image m_CrouchEffect = null;
     [HideInInspector] public Camera m_FPSCamera;
     private CharacterController m_CharacterController;
 
@@ -22,6 +22,7 @@ public class FPSTouchController : MonoBehaviour
     {
         m_FPSCamera = GameObject.FindWithTag("FPSCamera").GetComponent<Camera>();
         m_CharacterController = GetComponent<CharacterController>();
+        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
     }
 
     // Update is called once per frame
