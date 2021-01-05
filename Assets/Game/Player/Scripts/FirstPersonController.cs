@@ -51,6 +51,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Camera = GameObject.FindWithTag("FPSCamera").GetComponent<Camera>();
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
             
+
             m_HeadBob.Setup(m_Camera, m_StepInterval);
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;

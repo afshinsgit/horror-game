@@ -6,7 +6,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class SurfaceDetection : MonoBehaviour
 {
     [SerializeField] private List<SurfaceType> m_SurfaceTypes = new List<SurfaceType>();
-    [SerializeField] private FirstPersonController m_FPSController;
+    [SerializeField] private FirstPersonController m_FPSController = null;
     [SerializeField] private string m_currentSurface;
 
     void Start() { setGroundType(m_SurfaceTypes[0]); }
