@@ -38,7 +38,7 @@ public class FPSTouchController : MonoBehaviour
 
     public void Crouch()
     {
-        if (m_IsCrouching == false)
+        if (!m_IsCrouching)
         {
             m_IsCrouching = true;
             m_FPSController.m_StepInterval = 2.5f;
@@ -47,7 +47,7 @@ public class FPSTouchController : MonoBehaviour
             m_FPSController.m_AudioSource.volume = 0.004f;
             m_CrouchEffect.DOColor(new Color32(255, 255, 255, 125), 0.3f);
         }
-        else if (m_IsCrouching == true && !Physics.Raycast(transform.position, Vector3.up, 1))
+        else if (m_IsCrouching && !Physics.Raycast(transform.position, Vector3.up, 1))
         {
             m_IsCrouching = false;
             m_FPSController.m_StepInterval = 5f;
@@ -64,7 +64,7 @@ public class FPSTouchController : MonoBehaviour
 
         m_FPSCamera.transform.position = Vector3.Lerp(m_FPSCamera.transform.position,
         new Vector3(m_FPSCamera.transform.position.x, m_CharacterController.transform.position.y +
-        m_TargetHeight / 2.24f, m_FPSCamera.transform.position.z), m_CrouchDownSpeed * Time.deltaTime);
+        m_TargetHeight / 2f, m_FPSCamera.transform.position.z), m_CrouchDownSpeed * Time.deltaTime);
     }
 
     private void HandleHeadBob()
@@ -89,11 +89,11 @@ public class FPSTouchController : MonoBehaviour
 
     private void HandlePlayerWalkAndRunSpeed()
     {
-        if (m_IsCrouching == false && m_FPSController.RunAxis.y > 0.85f)
+        if (!m_IsCrouching && m_FPSController.RunAxis.y > 0.85f)
         {
             m_FPSController.m_RunSpeed = 6f;
         } 
-        else if (m_IsCrouching == false && m_FPSController.RunAxis.y <= 0.85f)
+        else if (!m_IsCrouching && m_FPSController.RunAxis.y <= 0.85f)
         {
             m_FPSController.m_RunSpeed = 4f;
         }
