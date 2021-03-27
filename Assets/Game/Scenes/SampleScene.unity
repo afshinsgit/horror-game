@@ -598,6 +598,56 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_StepInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.HorizontalBobRange
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.VerticaltoHorizontalRatio
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[2].time
+      value: 1.4956055
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[2].value
+      value: -0.68395996
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[3].time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[3].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[1].value
+      value: 0.712265
+      objectReference: {fileID: 0}
+    - target: {fileID: 325969591907965136, guid: be00f466be50f1047b545cbbaa45b461,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[1].time
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 325969591919128848, guid: be00f466be50f1047b545cbbaa45b461,
         type: 3}
       propertyPath: m_LocalPosition.x

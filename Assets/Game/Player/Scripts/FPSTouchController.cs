@@ -41,8 +41,8 @@ public class FPSTouchController : MonoBehaviour
         if (!m_IsCrouching)
         {
             m_IsCrouching = true;
-            m_FPSController.m_StepInterval = 2.5f;
-            m_FPSController.m_RunSpeed = 1.5f;
+            m_FPSController.m_StepInterval = 1.2f;
+            m_FPSController.m_RunSpeed = 0.75f;
             m_TargetHeight = 0.72f;
             m_FPSController.m_AudioSource.volume = 0.004f;
             m_CrouchEffect.DOColor(new Color32(255, 255, 255, 125), 0.3f);
@@ -50,8 +50,8 @@ public class FPSTouchController : MonoBehaviour
         else if (m_IsCrouching && !Physics.Raycast(transform.position, Vector3.up, 1))
         {
             m_IsCrouching = false;
-            m_FPSController.m_StepInterval = 5f;
-            m_FPSController.m_RunSpeed = 4f;
+            m_FPSController.m_StepInterval = 3f;
+            m_FPSController.m_RunSpeed = 2.5f;
             m_TargetHeight = 1.8f;
             m_FPSController.m_AudioSource.volume = 0.17f;
             m_CrouchEffect.DOColor(new Color32(255, 255, 255, 0), 0.3f);
@@ -73,11 +73,11 @@ public class FPSTouchController : MonoBehaviour
         {
             m_FPSController.m_UseHeadBob = false;
         }
-        else if (m_FPSController.RunAxis.y > 0f && m_FPSController.m_RunSpeed == 4f || m_FPSController.RunAxis.x > 0 && m_FPSController.m_RunSpeed == 4f)
+        else if (m_FPSController.RunAxis.y > 0f && m_FPSController.m_RunSpeed == 2.5f || m_FPSController.RunAxis.x > 0 && m_FPSController.m_RunSpeed == 2.5f)
         {
             m_FPSController.m_UseHeadBob = true;
         }
-        else if (m_FPSController.RunAxis.y < -0.1f && m_FPSController.m_RunSpeed == 4f)
+        else if (m_FPSController.RunAxis.y < -0.1f && m_FPSController.m_RunSpeed == 2.5f)
         {
             m_FPSController.m_UseHeadBob = true;
         }
@@ -91,11 +91,11 @@ public class FPSTouchController : MonoBehaviour
     {
         if (!m_IsCrouching && m_FPSController.RunAxis.y > 0.85f)
         {
-            m_FPSController.m_RunSpeed = 6f;
+            m_FPSController.m_RunSpeed = 4f;
         } 
         else if (!m_IsCrouching && m_FPSController.RunAxis.y <= 0.85f)
         {
-            m_FPSController.m_RunSpeed = 4f;
+            m_FPSController.m_RunSpeed = 2.5f;
         }
     }
 }
